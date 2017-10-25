@@ -22,8 +22,8 @@ html, body {
 
 * {
 	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 div {
@@ -90,10 +90,14 @@ h1 {
 		h2, h4 {
 			margin: 10px 0;
 		}
+		a, a:hover, a:focus {
+			text-decoration: none;
+			color: #000;
+		}
 		h2 {
 			overflow: hidden;
-		    text-overflow: ellipsis;
-		    white-space: nowrap;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 		h4 {
 			color: @item-color;
@@ -133,7 +137,7 @@ body:before, .content:before {
 .content-grid {
 	float: left;
 	position: relative;
-    min-height: 1px;
+	min-height: 1px;
 }
 
 // Simple grid system based on requirement
