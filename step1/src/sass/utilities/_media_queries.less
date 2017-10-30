@@ -1,0 +1,38 @@
+// Simple grid system based on requirement
+
+=media_pc
+	@media only screen and (min-width: 1440px)
+		@content
+=media_tablet
+	@media only screen and (min-width: 768px)
+		@content
+=media_sp
+	@media only screen and (max-width: 767px)
+		@content
+		
+$item-width: 405px
+
++media_sp
+	.content
+		min-width: 320px
+		max-width: $item-width
+		&-grid
+			width: 100%
+
++media_tablet
+	.content
+		max-width: $item-width * 2
+		&-grid
+			width: 50%
+		&-grid:nth-child(2n+1)
+			clear: both
+
++media_pc
+	.content
+		max-width: $item-width * 4
+		&-grid
+			width: 25%
+		&-grid:nth-child(2n+1)
+			clear: none
+		&-grid:nth-child(4n+1)
+			clear: both

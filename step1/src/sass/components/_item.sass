@@ -1,0 +1,72 @@
+$item-color: #e54e42
+
+.item
+	max-width: 360px
+	background-color: #fff
+	margin: 15px auto
+	box-shadow: 0 0 20px #888888
+	&-head
+		position: relative
+		color: #fff
+		font-weight: bold
+		&-date
+			$item-head-date-size: 60px
+			$item-head-date-padding: 12px
+			position: absolute
+			z-index: 0
+			top: 15px
+			right: 15px
+			width: $item-head-date-size
+			height: $item-head-date-size
+			padding: $item-head-date-padding
+			line-height: (($item-head-date-size - ($item-head-date-padding * 2)) / 2)
+			padding-top: $item-head-date-padding + 2px
+			border-radius: 50%
+			text-align: center
+			background-color: $item-color
+			span
+				display: block
+				font-size: 0.75em
+				text-transform: uppercase
+			span:first-child
+				font-size: 1.125em
+		&-title
+			$item-head-title-height: 40px
+			position: absolute
+			bottom: 4px
+			left: 0px
+			height: $item-head-title-height
+			line-height: $item-head-title-height
+			padding: 0 20px
+			background-color: $item-color
+			text-transform: uppercase
+		&-bg
+			width: 100%
+	$item-text-color: #696969
+	&-body
+		padding: 15px 40px
+		&-headline, &-summary
+			margin: 10px 0
+		a, a:hover, a:focus
+			text-decoration: none
+			color: #000
+		&-headline
+			overflow: hidden
+			text-overflow: ellipsis
+			white-space: nowrap
+		&-summary
+			color: $item-color
+		&-content
+			color: $item-text-color
+	&-stat
+		padding: 15px 40px 40px
+		display: inline-block
+		&-update, &-comment
+			font-style: normal
+			color: $item-text-color
+			float: left
+			line-height: 20px
+		&-update
+			padding-right: 10px
+		i.fa
+			padding-right: 5px
